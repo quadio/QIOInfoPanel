@@ -72,18 +72,18 @@
 
 -(void)setType:(QIOInfoPanelType)type {
     if(type == QIOInfoPanelTypeError) {
-        self.backgroundGradient.image = [[UIImage imageNamed:@"Red"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
+        self.backgroundGradient.image = [[UIImage imageNamed:@"warning_bg"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
         self.detailLabel.font = [UIFont fontWithName:@"Helvetica Neue" 
                                                 size:14];
-        self.thumbImage.image = [UIImage imageNamed:@"Warning"];
+        self.thumbImage.image = [UIImage imageNamed:@"Urgent"];
         self.detailLabel.textColor = [UIColor colorWithRed:1.f green:0.651f blue:0.651f alpha:1.f];
     }
     
     else if(type == QIOInfoPanelTypeInfo) {
-        self.backgroundGradient.image = [[UIImage imageNamed:@"Blue"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
+        self.backgroundGradient.image = [[UIImage imageNamed:@"info_bg"] stretchableImageWithLeftCapWidth:1 topCapHeight:5];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-        self.thumbImage.image = [UIImage imageNamed:@"Tick"];   
+        self.thumbImage.image = [UIImage imageNamed:@"Informational"];   
         self.detailLabel.textColor = RGBA(210, 210, 235, 1.0);
     }
 }
